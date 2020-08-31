@@ -7,7 +7,7 @@ describe('change', () => {
   });
 
   test('should return an error message if argument is not a number', () => {
-    expect(CoinCounter("tree").toEqual("invalid input"));
+    expect(CoinCounter("tree")).toEqual("invalid input");
   });
 
 });
