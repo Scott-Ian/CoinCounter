@@ -11,8 +11,9 @@ describe('change', () => {
   });
 
   test('should remove maximum amount of quarters possible', () => {
-    expect(CoinCounter(2.00)).stringContaining("quarters: 8");
+    expect(CoinCounter(2.00)).toEqual(expect.stringContaining("quarters: 8"));
   });
+
 
 });
 
