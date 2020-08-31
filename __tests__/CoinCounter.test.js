@@ -3,7 +3,7 @@ import { CoinCounter } from './../src/CoinCounter'
 describe('change', () => {
 
   test('should take in a decimal value and return a string', () => {
-    expect(CoinCounter(4.99)).toBeDefined();
+    expect(CoinCounter(499)).toBeDefined();
   });
 
   test('should return an error message if argument is not a number', () => {
@@ -11,12 +11,16 @@ describe('change', () => {
   });
 
   test('should remove maximum amount of quarters possible', () => {
-    expect(CoinCounter(2.00)).toEqual(expect.stringContaining("Quarters: 8"));
+    expect(CoinCounter(200)).toEqual(expect.stringContaining("Quarters: 8"));
   });
 
   test('should remove maximum amount of dimes possible', () => {
-    expect(CoinCounter(2.10)).toEqual(expect.stringContaining("Quarters: 8, Dimes: 1,"));
+    expect(CoinCounter(210)).toEqual(expect.stringContaining("Quarters: 8, Dimes: 1,"));
   });
+
+  test('should remove maximum amount of nickels possible', () => {
+    expect(CoinCounter(215)).toEqual(expect.stringContaining("Quarters: 8, Dimes: 1, Nickels: 1,"))
+  })
 
 
 
