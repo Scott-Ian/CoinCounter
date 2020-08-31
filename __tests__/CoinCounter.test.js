@@ -20,10 +20,11 @@ describe('change', () => {
 
   test('should remove maximum amount of nickels possible', () => {
     expect(CoinCounter(215)).toEqual(expect.stringContaining("Quarters: 8, Dimes: 1, Nickels: 1,"))
-  })
+  });
 
-
-
+  test('should return the total number of coins of each type', () => {
+    expect(CoinCounter(217)).toEqual("Quarters: 8, Dimes: 1, Nickels: 1, Pennies: 2");
+  });
 
 });
 
