@@ -1,29 +1,21 @@
-export function CoinCounterClosure(var1) {
-  return "";
-  // return function (var 2)
-  //   {
-  //     return function (var3) {
-  //       return termination point;
-  //     }
-  //   }
+function CoinCounterClosure(quarters) {
+  if (isNaN(quarters)) {
+    return "invalid input";
+  } else {
+    return function (dimes) {
+      return function (nickels) {
+        return function (pennies) {
+          return (quarters * .25) + (dimes * .10) + (nickels * .5) + (pennies * .01);
+        }
+      }
+    }
+  }
 }
+console.log(CoinCounterClosure(8)(6)(4)(4));
 
-  // function (number , coins = [25,10,5,1] ,){
-  //   return function(number ,coins[0]){
-
-  //     return 
-  //   }
-//}
-
-//
-
-// const divider = (numberToDivideBy) => { // 25
-//   return (numberToDivide) => {  //210
-//     return  numberToDivide / numberToDivideBy ;
+// return function (var 2)
+//   {
+//     return function (var3) {
+//       return termination point;
+//     }
 //   }
-// }
-// Now we can do the following:
-
-// const quarters = divider(25); //numbertodivideby => { return 210/25}
-// const dimes = divider(10); //numbertodivideby => { return 210/10}
-// const nickels = divider(5); //numbertodivideby => { return 210/5}
