@@ -10,6 +10,10 @@ describe('change', () => {
     expect(CoinCounter("tree")).toEqual("invalid input");
   });
 
+  test('should remove maximum amount of quarters possible', () => {
+    expect(CoinCounter(2.00)).stringContaining("quarters: 8");
+  });
+
 });
 
 
