@@ -15,7 +15,7 @@ describe('change', () => {
   });
 
   test('should remove maximum amount of dimes possible', () => {
-    expect(CoinCounter(2.10)).toEqual(expect.stringContaining("Quarters: 8 , Dimes: 1"));
+    expect(CoinCounter(2.10)).toEqual(expect.stringContaining("Quarters: 8, Dimes: 1,"));
   });
 
 
