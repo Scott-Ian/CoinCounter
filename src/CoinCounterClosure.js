@@ -1,4 +1,5 @@
 export function CoinCounterClosure(var1) {
+  return "";
   // return function (var 2)
   //   {
   //     return function (var3) {
